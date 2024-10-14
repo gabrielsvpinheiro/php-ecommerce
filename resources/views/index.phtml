@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <?php include __DIR__ . '/includes/head.phtml'; ?>
+</head>
+<body>
+<h1>Products</h1>
+<ul>
+    <?php foreach ($products as $product): ?>
+        <li>
+            <strong><?= $product['name'] ?></strong>
+            <span><?= $product['price'] ?></span>
+            <?php if ($product['is_available']): ?>
+                <span>Available</span>
+            <?php else: ?>
+                <span>Not available</span>
+            <?php endif; ?>
+        </li>
+    <?php endforeach; ?>
+</body>
+</html>

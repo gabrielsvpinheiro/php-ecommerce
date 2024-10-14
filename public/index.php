@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use App\Greetings;
+use App\Models\Product;
 
-$greetings = new Greetings();
-echo $greetings->sayHello('Gabriel');
+$products = Product::all();
+$title = 'My Webstore';
+
+require __DIR__ . '/../resources/views/index.phtml';
+
+
+
