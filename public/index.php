@@ -8,8 +8,9 @@ use App\Models\Product;
 
 $products = Product::all();
 $title = 'My Webstore';
+$heading = 'Home';
 
-require __DIR__ . '/../resources/views/index.phtml';
+require __DIR__ . '/../resources/views/index.php';
 
 
 
