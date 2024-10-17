@@ -6,7 +6,7 @@
                 Home
             </a>
 
-            <a href="/contact.php"
+            <a href="/contact"
                class="text-white py-2 px-3 leading-lg rounded-md hover:bg-gray-900 transition transition-all duration-[0.5s]">
                 Contact
             </a>

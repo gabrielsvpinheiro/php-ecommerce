@@ -4,13 +4,19 @@ declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use App\Models\Product;
+$uri = $_SERVER['REQUEST_URI'];
+$uri = parse_url($uri, PHP_URL_PATH);
 
-$products = Product::all();
-$title = 'My Webstore';
-$heading = 'Home';
+$routes = [
+    '/' => 'home',
+    '/contact' => 'contact',
+];
 
-require __DIR__ . '/../resources/views/index.php';
+if(array_key_exists($uri, $routes)) {
+    require base_path('src/Controllers/' . $routes[$uri] . '.php');
+} else {
+    abort();
+}
 
 
 
