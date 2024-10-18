@@ -24,9 +24,9 @@ COPY --chown=www-data:www-data . /var/www/html
 
 RUN npm install
 
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
-COPY nginx/fastcgi_params /etc/nginx/fastcgi_params
-COPY nginx/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY infrastructure/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY infrastructure/nginx/fastcgi_params /etc/nginx/fastcgi_params
+COPY infrastructure/nginx/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 80 9000
 
