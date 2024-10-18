@@ -8,6 +8,13 @@
                 Home
             </a>
 
+            <a href="/products"
+               class="
+                   <?= route_is('/products') ? 'bg-gray-900 text-white' : 'text-gray-300' ?>
+                   py-2 px-3 leading-lg rounded-md hover:bg-gray-900 transition transition-all duration-[0.5s]">
+                Products
+            </a>
+
             <a href="/contact"
                class="
                    <?= route_is('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300' ?>
