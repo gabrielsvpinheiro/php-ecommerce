@@ -4,7 +4,17 @@
 
     <main>
         <div class="mx-auto max-w-7xl py-6 px-8">
-            My main content here
+            <div>
+                <h2 class="text-3xl leading-6 font-bold text-gray-900">Products</h2>
+                <ul>
+                    <?php foreach($products as $product): ?>
+                        <li>
+                            <a href="/product?id=<?= $product['id'] ?>">
+                                <?= $product['name'] ?> - R$<?= $product['price'] ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+            </div>
         </div>
     </main>
 

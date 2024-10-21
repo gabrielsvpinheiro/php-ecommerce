@@ -3,7 +3,8 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "Core\\": "Core/"
         },
         "files": [
             "src/helpers.php"
@@ -17,6 +18,8 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "monolog/monolog": "^3.7"
+        "monolog/monolog": "^3.7",
+        "ext-pdo": "*",
+        "vlucas/phpdotenv": "^5.6"
     }
 }
